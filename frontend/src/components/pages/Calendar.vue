@@ -83,6 +83,7 @@ export default {
       this.setClickedDate(null);
     },
     initEvent({ date }) {
+      date = date.replace(/-/g, '/');
       if (this.clickedDate !== null) {
         return;
       }
@@ -91,6 +92,7 @@ export default {
       this.setEditMode(true);
     },
     showDayEvents({ date }) {
+      date = date.replace(/-/g, '/');
       this.setClickedDate(date);
     },
   },
